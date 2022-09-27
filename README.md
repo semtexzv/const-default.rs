@@ -1,6 +1,6 @@
 # ConstDefault Trait
 
-[![Crates.io](https://img.shields.io/crates/v/const-default)](https://crates.io/crates/const-default) [![Crates.io](https://img.shields.io/crates/l/const-default)](LICENSE) [![docs.rs](https://img.shields.io/docsrs/const-default)](https://docs.rs/const-default) [![actions](https://github.com/AerialX/const-default.rs/actions/workflows/rust.yml/badge.svg)](https://github.com/AerialX/const-default.rs/actions/workflows/rust.yml)
+[![Crates.io](https://img.shields.io/crates/v/constdefault)](https://crates.io/crates/constdefault) [![Crates.io](https://img.shields.io/crates/l/constdefault)](LICENSE) [![docs.rs](https://img.shields.io/docsrs/constdefault)](https://docs.rs/constdefault) [![actions](https://github.com/AerialX/constdefault.rs/actions/workflows/rust.yml/badge.svg)](https://github.com/AerialX/constdefault.rs/actions/workflows/rust.yml)
 
 A `Default`-like trait and derive macros for `const` evaluation contexts.
 
@@ -19,7 +19,7 @@ easily for their custom types.
 Add
 ```toml
 [dependencies]
-const-default = { version = "1.0", features = ["derive"] }
+constdefault = { version = "1.0", features = ["derive"] }
 ```
 to your `Cargo.toml` to start using it.
 
@@ -28,7 +28,7 @@ to your `Cargo.toml` to start using it.
 ### Rust Primitives
 
 ```rust
-use const_default::ConstDefault;
+use constdefault::ConstDefault;
 
 fn main() {
     assert_eq!(<i32 as ConstDefault>::DEFAULT, 0);
@@ -41,7 +41,7 @@ fn main() {
 ### Derive
 
 ```rust
-use const_default::ConstDefault;
+use constdefault::ConstDefault;
 
 #[derive(ConstDefault, Debug, Default, PartialEq)]
 pub struct Color {

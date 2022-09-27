@@ -1,6 +1,6 @@
 #![cfg(feature = "derive")]
 
-use const_default::ConstDefault;
+use constdefault::ConstDefault;
 use core::cell::{Cell, RefCell};
 #[cfg(feature = "enable-atomics")]
 use core::sync::atomic::{

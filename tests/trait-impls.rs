@@ -1,4 +1,4 @@
-use const_default::ConstDefault;
+use constdefault::ConstDefault;
 #[cfg(feature = "enable-atomics")]
 use core::sync::atomic::{
     AtomicBool,

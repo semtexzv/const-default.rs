@@ -1,4 +1,4 @@
-#![doc(html_root_url = "http://docs.rs/const-default/1.0.0")]
+#![doc(html_root_url = "http://docs.rs/constdefault/1.0.0")]
 #![cfg_attr(not(feature = "std"), no_std)]
 #![cfg_attr(feature = "unstable-docs", feature(doc_cfg))]
 #![cfg_attr(
@@ -20,7 +20,7 @@ extern crate alloc;
 
 #[cfg(feature = "derive")]
 #[cfg_attr(feature = "unstable-docs", doc(cfg(feature = "derive")))]
-pub use const_default_derive::ConstDefault;
+pub use constdefault_derive::ConstDefault;
 
 /// Implements a compilation time default value for the implemented type.
 ///
@@ -34,7 +34,7 @@ pub use const_default_derive::ConstDefault;
 /// ```
 /// # #[cfg(feature = "std")]
 /// # const _: () = {
-/// # use const_default::ConstDefault;
+/// # use constdefault::ConstDefault;
 /// const VEC: Vec<u8> = <Vec<u8> as ConstDefault>::DEFAULT;
 /// # };
 /// ```
@@ -53,7 +53,7 @@ pub trait ConstDefault: Sized {
 #[inline]
 #[cfg(feature = "unstable")]
 #[cfg_attr(feature = "unstable-docs", doc(cfg(feature = "unstable")))]
-pub const fn const_default<T: ConstDefault>() -> T {
+pub const fn constdefault<T: ConstDefault>() -> T {
     T::DEFAULT
 }
 
